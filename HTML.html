@@ -3,85 +3,201 @@
 <head>
     <title>FAC application</title> 
     <meta charset="utf-8">
-    <link rel = "stylesheet" type="text/css" href = "./CSS/stylesheet.css">
+    <meta nane="viewport" content="width=device=width, initial-scale=1.0">
+    <link rel = "stylesheet" type="text/css" href = "CSS/grid.css">
+    <link rel = "stylesheet" type="text/css" href = "CSS/stylesheet.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,700i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Lato" rel="stylesheet">
     <script src="./JS/javascript.js"></script> 
 
 </head>
 <body>
     <header>
-            <nav class="topnav">
-                <a class="active" href="#home">Leonie Zorzi</a>
-                <a href="#aboutMe">About me</a>
-                <a href="#whyCoding">Why Coding? </a>
-                <a href="#whyFAC">Why FAC?</a>
-                <a href="#contact">Contact me</a>
+            <!-- NAVIGATION-->
+            <nav>
+                <div class="row">
+                    <div id="home"><a href="#home" >Leonie Zorzi</a></div>
+                    <ul class="main-nav">
+                        <li><a href="#aboutMe" >About me</a></li>
+                        <li><a href="#whyCoding" >Why Coding? </a></li>
+                        <li><a href="#whyFAC" >Why FAC?</a></li>
+                        <li><a href="#contact" >Contact me</a></li>
+                    </ul>
+                </div>
             </nav>
+
+            <!-- HERO-->
+            <div class="hero-text-box">
+                <p id="welcome">Dear FAC family, </p>
+                <p id="welcome_text">My name is Leonie, and I am <b class="highlight">an aspiring web developer,</b><br>inspired by the philosophy of effective altruism,<br> the TechForGood movement and <br> London's vibrant coding community.</p>
+            </div>
+
     </header>
     <main>
-        <section id="home">
-            <p>Hello FAC family,<p>
-            <p>My name is Leonie, and I am an aspiring web developer.<br> Inspired by the philosophy of effective altruism, the TechForGood movement and London's vibrant coding community, I am keen to start a career in web development. </p>
-        </section>
+        <!-- ABOUT ME -->
         <section id="aboutMe">
-            <div>To find out more about me, click through the images.</div>
-            <img src ="./images/image_carousel/placeholder.jpg" alt="Image Carousel with pictures about my life">
+            <div class="row whitespace "></div>
+            <div class="row about">
+                <div class="col span-3-of-12">
+                        <p class="find_out">If you want<br>to know more<br>about me, please</p><div class="highlight find_out">click through</div><p class="find_out">the images.</p> 
+                </div>
+                <div class="col span-9-of-12">
+                        <img src ="./images/image_carousel/Geschwister_BW.png" alt="Image Carousel with pictures about my life" id="carousel">
+                </div>
+            </div>
+        
         </section>
-        <section id="whyCoding">
-            <h1>Why Coding?</h1>
-            <h2>How a Japanese philosophy inspired me to learn coding</h2>
-            <p>After college, I was drawn to a career in media production as it seemed to provide a perfect blend of creativity, collaboration and entrepreneurship. 
-                Ten years, two media degrees and three international moves later, I'm now working as freelance producer and motion designer in the advertising industry. 
-                Throughout the past years, I had the opportunity to work on film, TV productions and online content - all projects that  19-year old me would have been super excited about. 
-                But instead of excitement, I started feeling increasingly frustrated in my job and with my career choices. 
-                As I was looking for the root of my frustration (or 'quater life' crisis as I called it),  I learned about 
-                <a href="https://en.wikipedia.org/wiki/Ikigai" title="Wikipedia article about ikigai" target="_blank">ikigai</a>, a Japanese concept that means "a reason for being", or roughly translated "the thing that you live for". <br>
-                And there was my answer, black in white, in six letters:  I haven't found my <b>ikigai </b> yet, and I knew that I wouldn't find it in film and video production.<br>
-                So I set out on a quest to find my ikigai by addressing the four defining questions.</p>
-                <img src="./images/ikigai.jpg" alt="Diagram illustrating the concept of ikigai">
-                <a><h2>What the world neeeds</h2></a>
-                    <p>
-                        This felt like the most important question for me to address, since I strongly believe (and research suggests) that meaningful work, i.e. work that helps others in some way, is one of the most powerful routes to a satisfying career. I also felt that this was  where I saw most discrepancy between my goals and my current career. (Cause let's be honest, advertising and entertainment is not really top of the 'What the world needs' list.) Through my research, I came to learn about  effective altruism and discovered the incredibly inspiring website 80,000 hours: An eye-opening online resource that provides advice on careers with positive social impact. I devoured this website from top to bottom. And in doing so, I learned about the multiple ways a career in tech can have a social impact and be used to help others. My excitement for the tech industry was further spurred, when I discovered the Tech for Good community and some of the exciting projects they've created (like ). The idea of designing, building and using tech to drive social change excited me tremendously and looking ahead in our digital future, I believe it is **exactly what the world needs.**
 
+        <!-- whyCoding section-->
+        <section id="whyCoding" >
+                <div class="row">
+                        <div class="col span-2-of-12"></div>
+                        <div class="col span-9-of-12">
+                                <h1>How a Japanese philosophy<br>led me on my path to learn coding</h1>
+                        </div>
+                            
+                </div>
+                <div class="row" id="whycoding_text">
+                        <div class="col span-1-of-12"></div>
+                        <div class="col span-3-of-12">
+                            <p class="quote_mark highlight" id="ikigai_mark">"</p>
+                            <p class="quote" id="ikigai_quote">ikigai is the reason why you get up in the morning. Ikigai is about feeling your work makes a difference in people's lives.</p>
+                        </div>
+                        <div class="col span-7-of-12">
+                            <p>After college, I was drawn to a career in media production as it seemed to provide a perfect blend of creativity, collaboration and entrepreneurship. 
+                             Ten years, two media degrees and three international moves later, I'm now working as freelance producer and motion designer in the advertising industry. 
+                            Throughout the past years, I had the opportunity to work on film, TV productions and online content - all projects that  19-year old me would have been super excited about. 
+                            But instead of excitement, I started feeling increasingly frustrated in my job and with my career choices. 
+                            As I was looking for the root of my frustration (or 'quater life' crisis as I called it),  I learned about 
+                            <a href="https://en.wikipedia.org/wiki/Ikigai" title="Wikipedia article about ikigai" target="_blank">ikigai</a>, a Japanese concept that means "a reason for being".
+                            </p>
+                            <p>
+                            And there was my answer, black in white, in six letters:  I haven't found my <b>ikigai </b> yet, and I knew that I wouldn't find it in film and video production.<br>
+                            So I set out on a quest to find my ikigai by addressing the four defining questions.
+                            </p>
+                            <div id="ikigai_diagram"> 
+                                    <img src="./images/ikigai.jpg" alt="Diagram illustrating the concept of ikigai">
+                            </div>
+                            
+                        </div>
+                    
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-12"></div>
+                    <div class="col span-3-of-12" id="cycle">
+                            <p class="quote_mark highlight" id="cycle_mark">"</p>
+                            <p class="quote" id="cycle_quote">Strive not to be a success, but rather to be of value.</p>
+                            <p class="author">Albert Einstein</p>
+                    </div>
+                    <div class="col span-7-of-12">
+                            <h2>What does the world neeed?</h2>
+                            <p id="cycle_text">This felt like the most important question for me to address, since I strongly believe (and research suggests) that meaningful work, i.e. work that helps others in some way, is one of the most powerful routes to a satisfying career. I also felt that this was  where I saw most discrepancy between my goals and my current career. (Cause let's be honest, advertising and entertainment is not really top of the 'What the world needs' list.) Through my research, I came to learn about  effective altruism and discovered the incredibly inspiring website 80,000 hours: An eye-opening online resource that provides advice on careers with positive social impact. I devoured this website from top to bottom. And in doing so, I learned about the multiple ways a career in tech can have a social impact and be used to help others. My excitement for the tech industry was further spurred, when I discovered the Tech for Good community and some of the exciting projects they've created (like ). The idea of designing, building and using tech to drive social change excited me tremendously and looking ahead in our digital future, I believe it is <b>exactly what the world needs</b>.
+                            </p>
+                    </div>
+                </div>
 
-                    </p>
-                <a><h2>What you love</h2></a>
-                <a><h2>What you are good at</h2></a>
-                <a><h2>What you can be paid for</h2></a>
-                <div class="quote">When confronted with a big goal, try to break it down into parts and then attack each part one by one.</div>
-                <div class="quote_caption">Hector Garcia Puigcerver</div>
-                <p>The more I got into coding, the more I felt that a career with coding could be my ikigai. This felt like a revelation, like a stone of concern was slowly lifted from my shoulders. All the anxiety and regrets I had in regards to career choices transformed into excitement and ambition. I know that learning web development is a huge goal and in fact more of a path than a goal as there'll always be something to learn. I feel that the FAC bootcamp would be an extremely valuable, exciting part of that path. </p>
-
+                <div class="row viewport_80">
+                        <div class="col span-1-of-12"></div>
+                        <div class="col span-8-of-12">
+                                <p class="statement" id="coding_statement">The more I learn about coding, the more I feel 
+                                        it could become my ikigai. It transformed the 
+                                        anxiety and regrets I had in regards 
+                                        to career choices into excitement. 
+                                        And when I learned about FAC, my excitment and 
+                                        ambition about this career choice grew even more. 
+                                    
+                                    </p>
+                        </div>
+                    </div>
+    
+        
         </section>
-        <section id="whyFAC">
-            <h1>Why FAC?</h1>
-                <h2>I'd love to become part of the FAC family. </h2>
-                    <p>When I went to my first FAC meetup in December as a complete novice, I was a bit anxious about going to a coding meetup, having just started on freecodecamp. But I immediately felt welcome and to my surprise, not out of place at all. In every meetup since as well as in the gitter chat, I've experienced FAC as an extremely outgoing, helpful and diverse community of like minded people.  And in every article I read about FAC, alumni and student highlighted the strong sense of community in and outside the course (Fatima even refers to it as a family) Growing up in a very close-knit neighbourhood collective (not quite a commune, but half the way there), a feeling of community was always something that I've missed in London - a city that isn't really know for it's communal spirit. So the idea of becoming part of a community that is all about learning together and helping each other, immediately caught my interest. For me, this is where FAC differs the most from any other coding bootcamp and why I am so much more excited about it. I don't see it as a one-off 16-week thing, but as a long-term opportunity to become part of a community of like-minded people during and beyond the bootcamp.  I'd love to become part of the community and help it grow in and beyond London. 
-                    </p>
-
-                <h2>I enjoy pair programming and believe in the value self-directed learning</h2>
-                    <p>Throughout the regular FAC meetups and the part-time short course, I learned about and had a chance to practice pair programming on multiple occasions. This was an eye-opening experience for me, as I always presumed that coding was primarily a solitary exercise. With pair programming, I learned that coding can be very collaborative and challenging in two very different ways: 1) finding solutions for coding challenges and 2) explaining problems and solutions to a fellow coder verbally.  I believe that both challenges require different skill sets and are equally important. I thoroughly enjoy pair programming as it genuinley like working in teams and I found that it consolidated my own learning tremendously. Eventually I hope to integrate this practice into my professional life. Hence, I was very excited when I learned that FAC students do peer programming pretty much from 10am to 6pm - so plenty of time to hone both of those skill sets. 
-                        <br>Another point that FAC students and alumni highlighted to me was that the course requires a lot of self-initiated learning, i.e. instead of spoon feeding information, students are asked to research topics and solutions on their own. As a self-taught motion graphics designer, I am very familiar with this kind of learning. I know how often a solution is just one google search away and the only thing that keeps you from it, is your own ability to find the right question. Therefore, I find that research skills are invaluable and from my understanding, the FAC curriculum provides a perfect framework to hone those research skills. As I'm an experienced, persistent self-learner, I believe that this teaching approach fits very well with my own nature.
-                    </p>
                 
-                <h2>I'm interested in tech that drives social change </h2>
-                <p>As mentioned above, it's very important for me to find a career that allows me to do work that helps others and Tech for Good community was a huge inspiration for me to start coding. This is why I was particularly excited when I learned that working with non-profit organisations is a key part of the FAC curriculum. I found it very interesting and inspiring to learn about the different partnerships and collaborations associated with FAC, such as Yalla Cooperative and Intersticia. These initiatives illustrate that FAC fosters the kind of work opportunities that I'm most interested in.  As a video producer, I've always enjoyed creating content for charities and social-good startups. In the future, I hope that I can continue using my video production skills as well as my coding skills to help social enterprises. Doing so even while I'm still learning to be a web developer would be an amazing opportunity that I'd highly appreciate.
-                </p>
-
-                <h2>I believe in giving back and in making education more accessible. </h2>
-                <p>When I first heard about FAC, I was amazed by the idea of a self-sustainable, accessible educational system. I was also surprised that I haven't come across something similar before as the concept seemed so simple and the value so apparent. Way to often, education seems to be a privilege that's not accessible to many due to large tuition fees. I believe that education is a key driving force in either dividing or uniting societies. That's why I find that enterprises that foster accessibility and inclusivity in education are extremely valuable. I cherish the idea that I could help maintain and foster such an initiative as a FAC alumni and mentor.  I'm very grateful about the opportunities that have been presented to me and would like to pass on the support I've received myself. I also feel that "near-peer" mentorship has a multitude of other benefits: cooperating with other like-minded people, being involved in a vibrant learning environment and consolidating my own knowledge, just to name a few.  I'm very excited about FAC's plans to extend their activities to other countries, and I'd love to play an active role in it's national and international growth. 
-                </p>
+        <!-- whyFAC section-->
+        <section id="whyFAC">
+            <div class="row">
+                    <div class="col span-1-of-12"></div>
+                    <div class="col span-9-of-12">
+                            <h1>So why do I want to join FAC?</h1>
+                    </div>
+            </div> 
+            <div class="row">
+                    <div class="col span-1-of-12"></div>
+                    <div class="col span-10-of-12">
+                            <p class="subheading">Well, there is more than one answer to this question...</p>
+                    </div>
+            </div> 
+            <div class="row distance">
+                    <div class="col span-1-of-12"></div>
+                    <div class="col span-3-of-12">
+                            <p class="reasons_right"></p>
+                            <p class="reasons_right"> I'd love to become part of the <div class="highlight reasons_right">FAC family</div></p>
+                    </div>
+                    <div class="col span-7-of-12">
+                            <p class="reasons_text_left">When I went to my first FAC meetup in December as a complete novice, I was a bit anxious about going to a coding meetup, having just started on freecodecamp. But I immediately felt welcome and to my surprise, not out of place at all. In every meetup since as well as in the gitter chat, I've experienced FAC as an extremely outgoing, helpful and diverse community of like minded people.  And in every article I read about FAC, alumni and student highlighted the strong sense of community in and outside the course (Fatima even refers to it as a family) Growing up in a very close-knit neighbourhood collective (not quite a commune, but half the way there), a feeling of community was always something that I've missed in London - a city that isn't really know for it's communal spirit. So the idea of becoming part of a community that is all about learning together and helping each other, immediately caught my interest. For me, this is where FAC differs the most from any other coding bootcamp and why I am so much more excited about it. I don't see it as a one-off 16-week thing, but as a long-term opportunity to become part of a community of like-minded people during and beyond the bootcamp.  I'd love to become part of the community and help it grow in and beyond London. 
+                            </p>
+                    </div>
+            </div>
+            <div class="row distance">
+                    <div class="col span-1-of-12"></div>
+                    <div class="col span-7-of-12">
+                            <p class="reasons_text_right">As mentioned above, it's very important for me to find a career that allows me to do work that helps others and Tech for Good community was a huge inspiration for me to start coding. This is why I was particularly excited when I learned that working with non-profit organisations is a key part of the FAC curriculum. I found it very interesting and inspiring to learn about the different partnerships and collaborations associated with FAC, such as Yalla Cooperative and Intersticia. These initiatives illustrate that FAC fosters the kind of work opportunities that I'm most interested in.  As a video producer, I've always enjoyed creating content for charities and social-good startups. In the future, I hope that I can continue using my video production skills as well as my coding skills to help social enterprises. Doing so even while I'm still learning to be a web developer would be an amazing opportunity that I'd highly appreciate.
+                            </p>
+                    </div>
+                    <div class="col span-3-of-12">
+                            <p class="reasons_left">I'm interested in tech that drives <div class="highlight reasons_left">social change</div></p>
+                    </div>
+            </div>
+            <div class="row distance">
+                    <div class="col span-1-of-12"></div>
+                    <div class="col span-3-of-12">
+                            <p class="reasons_right">I enjoy </p><div class="highlight reasons_right">pair programming</div><p class="reasons_right">and believe in the value self-directed learning</p>
+                    </div>
+                    <div class="col span-7-of-12">
+                            <p class="reasons_text_left">Throughout the regular FAC meetups and the part-time short course, I learned about and had a chance to practice pair programming on multiple occasions. This was an eye-opening experience for me, as I always presumed that coding was primarily a solitary exercise. With pair programming, I learned that coding can be very collaborative and challenging in two very different ways: 1) finding solutions for coding challenges and 2) explaining problems and solutions to a fellow coder verbally.  I believe that both challenges require different skill sets and are equally important. I thoroughly enjoy pair programming as it genuinley like working in teams and I found that it consolidated my own learning tremendously. Eventually I hope to integrate this practice into my professional life. Hence, I was very excited when I learned that FAC students do peer programming pretty much from 10am to 6pm - so plenty of time to hone both of those skill sets. 
+                            <br>Another point that FAC students and alumni highlighted to me was that the course requires a lot of self-initiated learning, i.e. instead of spoon feeding information, students are asked to research topics and solutions on their own. As a self-taught motion graphics designer, I am very familiar with this kind of learning. I know how often a solution is just one google search away and the only thing that keeps you from it, is your own ability to find the right question. Therefore, I find that research skills are invaluable and from my understanding, the FAC curriculum provides a perfect framework to hone those research skills. As I'm an experienced, persistent self-learner, I believe that this teaching approach fits very well with my own nature.
+                            </p>
+                    </div>
+            </div>
+            <div class="row distance">
+                    <div class="col span-1-of-12"></div>
+                    <div class="col span-7-of-12">
+                            <p class="reasons_text_right">When I first heard about FAC, I was amazed by the idea of a self-sustainable, accessible educational system. I was also surprised that I haven't come across something similar before as the concept seemed so simple and the value so apparent. Way to often, education seems to be a privilege that's not accessible to many due to large tuition fees. I believe that education is a key driving force in either dividing or uniting societies. That's why I find that enterprises that foster accessibility and inclusivity in education are extremely valuable. I cherish the idea that I could help maintain and foster such an initiative as a FAC alumni and mentor.  I'm very grateful about the opportunities that have been presented to me and would like to pass on the support I've received myself. I also feel that "near-peer" mentorship has a multitude of other benefits: cooperating with other like-minded people, being involved in a vibrant learning environment and consolidating my own knowledge, just to name a few.  I'm very excited about FAC's plans to extend their activities to other countries, and I'd love to play an active role in it's national and international growth. 
+                            </p>
+                    </div>
+                    <div class="col span-3-of-12">
+                            <p class="reasons_left">I believe in </p><div class="highlight reasons_left">giving back</div><p class="reasons_left">and in making education more accessible</p>
+                    </div>
+            </div>
         </section>
+
         <section id="contact">
-        <h1>Contact me</h1>
-        <p>Thanks for taking the time to read through my website. I know it was quite a bit. I hope it was enough to spark your interest in meeting me for a chat. <br>
-            You can get in touch with me at <b>Leonie.Zorzi@hotmail.com</b> or <b>07484 143 159 </b>. 
+        <div class="row viewport_80">
+                <div class="col span-2-of-12"></div>
+                <div class="col span-8-of-12">
+                        <p id="thanks">Thanks</p>
+                        <p class="statement">...for taking the time to read through my website. I know it was quite a bit. I hope it was enough to spark your interest in meeting me for a chat. If so, you can contact me at <b class="highlight">Leonie.Zorzi@hotmail.com</b> or <b class="highlight">07484&nbsp;143&nbsp;159</b>.
+                </div>
+                <div class="col span-2-of-12"></div>
+        </div> 
         </section>
     </main>
-    <footer>
-        <a href="https://www.codewars.com/users/LaLeonie" title="My Codewars Profile" target="_blank">Codewars</a>
-        <a href="https://www.freecodecamp.org/laleonie" title="My FreeCodeCamp Profile" target="_blank">FreeCodeCamp</a>
-        <a href="https://github.com/LaLeonie/My-FAC-website" title="GitHub repository" target="_blank">GitHub repository</a>
+    <footer id="main-footer">
+        <div class="row">
+                <div class="col span-3-of-12"></div>
+                <div class="col span-6-of-12">
+                        <a href="https://www.codewars.com/users/LaLeonie" title="My Codewars Profile" target="_blank">Codewars</a>
+                        <a href="https://www.freecodecamp.org/laleonie" title="My FreeCodeCamp Profile" target="_blank">FreeCodeCamp</a>
+                        <a href="https://github.com/LaLeonie/My-FAC-website" title="GitHub repository" target="_blank">GitHub repository</a>
 
+                </div>
+                <div class="col span-3-of-12"></div>
+                
+
+        </div>
+                        
+            
     </footer>
 </body>
 </html>

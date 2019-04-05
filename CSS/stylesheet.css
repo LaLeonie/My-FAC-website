@@ -1,0 +1,300 @@
+/* COLORS
+
+text grey:  #4B5161; 
+orange: #FF634A; 
+quote grey: #778299; 
+
+*/
+/*-------------------------------------------layout--------------------------------------------------*/
+.row{
+    max-width: 2140px; 
+    margin: 0 auto;
+    padding: 0 2%;
+    border: 2px solid red;  
+}
+
+.viewport_80{
+    height: 80vh; 
+}
+
+.viewport_100{
+    height: 100vh; 
+}
+
+.whitespace{
+    margin: 10% 0 0 0; 
+}
+/*-------------------------------------------basic setup--------------------------------------------------*/
+*{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    /* z */
+}
+
+p {
+    font-family: 'Raleway', Arial, sans-serif;
+    color: #4B5161;
+    font-size: 1.4em; 
+    text-rendering: optimizeLegibilty; 
+    letter-spacing: 200%; 
+    line-height: 1.5em; 
+    text-align: justify; 
+}
+
+img{
+    display: block; 
+    width: 100%; 
+    height: auto; 
+}
+
+h1{
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 350%; 
+    color: #4B5161; 
+    font-weight: 700; 
+    display: inline-block; 
+    padding: 4% 0 1% 0; 
+    line-height: 1.1em; 
+    margin: 8% 0 0 0;
+    border-bottom: 3px solid #FF634A;
+}
+
+h2{
+    font-family: 'Playfair Display', serif;
+    font-size: 250%; 
+    color: #4B5161; 
+    font-weight: 700; 
+    display: inline-block; 
+    padding: 10% 0 5% 0; 
+    line-height: 1.1em; 
+    letter-spacing: 0.1em; 
+    text-transform: uppercase; 
+}
+
+.highlight{
+    color: #FF634A; 
+}
+
+.statement{
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 250%; 
+    color: #4B5161; 
+    font-weight: 400; 
+    display: inline-block; 
+    padding: 0 0 1% 0; 
+    text-align: right; 
+    line-height: 1.4em; 
+}
+
+.subheading{
+    text-align: right; 
+}
+
+/*-------------------------------------------quotes--------------------------------------------------*/
+.quote_mark{
+    font-size: 1500%; 
+    font-family: 'Playfair Display', serif;
+    line-height: 0.1em; 
+
+}
+.quote{
+    font-family: 'Playfair Display', serif;
+    font-weight: 700; 
+    font-size: 150%; 
+    color: #778299; 
+}
+
+.author{
+    text-align: right; 
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 100%; 
+    color: #FF634A; 
+    display: inline-block; 
+
+}
+
+/*-------------------------------------------buttons--------------------------------------------------*/
+.btn{
+    display: block; 
+    background: yellow; 
+    color: black; 
+    text-decoration: none; 
+    padding: 1em 1.5em; 
+    border: 1px solid #666; 
+    margin: .5em 0; 
+}
+
+/*-------------------------------------------HEADER--------------------------------------------------*/
+/*-------------------------------------------navigation--------------------------------------------------*/
+.main-nav{
+    float: right; 
+    list-style: none;
+    margin-top: 20px; 
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+.main-nav li{
+    display: inline-block; 
+    margin-left: 40px; 
+    text-decoration: none; 
+}
+
+#home {
+    float: left; 
+    display: inline-block;
+    margin-top: 20px; 
+}
+
+#home a{
+    color: #4B5161; 
+    text-decoration: none; 
+    text-transform: uppercase; 
+    font-size: 90%; 
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+.main-nav li a:link, 
+.main-nav li a:visited{
+    color: #4B5161; 
+    text-decoration: none; 
+    text-transform: uppercase; 
+    font-size: 90%; 
+    border-bottom: 2px solid transparent; 
+    transition: border-bottom 0.25s;
+    padding: 6px 0;  
+}
+
+.main-nav li a:hover, 
+.main-nav li a:active{
+    border-bottom: 3px solid #FF634A; 
+}
+
+
+
+/*-------------------------------------------hero--------------------------------------------------*/
+header{
+    background-image: url(img/Hero_placeholder.png); 
+    height: 100vh; 
+    background-size: cover; 
+    background-position: bottom;
+}
+
+.hero-text-box{
+    position: absolute; 
+    width: 1140px; 
+    top: 50%; 
+    left: 8%; 
+}
+
+#welcome{
+    font-family: 'Playfair Display', serif;
+    margin: 0 0 0.2em 20%; 
+    font-size: 500%; 
+    font-weight: 600; 
+    letter-spacing: 130%; 
+    word-spacing: 3px; 
+    color: #F4F8F9; 
+}
+
+#welcome_text{
+    font-weight: 100; 
+    font-size: 200%; 
+    color: #F4F8F9; 
+}
+/*-------------------------------------------MAIN--------------------------------------------------*/
+/*-------------------------------------------carousel--------------------------------------------------*/
+#carousel{
+    width: 100%; 
+    padding: 0 auto;
+
+}
+
+.find_out{
+    font-size: 200%; 
+    text-align: right; 
+    font-family: 'Raleway', Arial, sans-serif;
+    font-weight: 400; 
+}
+
+.about{
+    height: 30%; 
+}
+
+/*-------------------------------------------why coding--------------------------------------------------*/
+#ikigai_diagram{
+    padding: 15% 0 0 0; 
+}
+
+#ikigai_quote{
+    padding: 0 20% 0 0; 
+    text-align: left; 
+}
+
+#ikigai_mark{
+    margin: 80% 0 0 0; 
+}
+
+#cycle{
+    padding-top: 30%; 
+}
+
+#cycle_quote{
+    padding: 0 20% 0 0; 
+    text-align: left; 
+}
+
+#cycle_text{
+    padding: 0 0 5% 0; 
+}
+
+#coding_statement{
+    padding: 30% 0 0 0; 
+}
+
+/*-------------------------------------------why FAC--------------------------------------------------*/
+.reasons_left{
+    font-family: 'Playfair Display', serif;
+    text-align: left; 
+    font-size: 280%; 
+    font-weight: 700; 
+    line-height: 0.95em; 
+}
+
+.reasons_right{
+    font-family: 'Playfair Display', serif;
+    text-align: right; 
+    font-size: 280%; 
+    font-weight: 700; 
+    line-height: 0.95em; 
+    padding: 0 6% 0 0; 
+}
+
+.reasons_text_left{
+    margin: 6% 0 0 0; 
+    text-align: left; 
+}
+
+.reasons_text_right{
+    margin: 6% 0 0 0; 
+    text-align: right; 
+}
+
+.distance{
+    margin: 4% 0 0 0; 
+}
+/*-------------------------------------------Contact--------------------------------------------------*/
+
+#thanks{
+    font-family: 'Playfair Display', serif;
+    color: #FF634A; 
+    font-weight: 700; 
+    font-size: 800%; 
+    padding: 20% 0 0 0; 
+}
+
+/*-------------------------------------------Footer--------------------------------------------------*/
+
+#main-footer{
+    float: center; 
+}
