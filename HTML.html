@@ -3,7 +3,7 @@
 <head>
     <title>FAC application</title> 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" type="text/css" href = "CSS/grid.css">
     <link rel = "stylesheet" type="text/css" href = "CSS/stylesheet.css">
     <link rel = "stylesheet" type="text/css" href = "CSS/queries.css">
@@ -47,7 +47,21 @@
                         <h2 class="find_out">If you want to know more about me, please <span class="highlight">click through</span> the images.</h2> 
                 </div>
                 <div class="col span-9-of-12">
-                        <img src ="./images/image_carousel/Geschwister_BW.png" alt="Image Carousel with pictures about my life" id="carousel">
+                        <div class="carousel-container">
+                                        <i class="fas fa-play" id="play" ></i>
+                                        <i class="fas fa-pause" id ="pause" style="display: none"></i>
+                                        <i class="fas fa-arrow-alt-circle-left" id="prevBtn"></i>
+                                        <i class="fas fa-arrow-alt-circle-right" id="nextBtn"></i>
+                                <div class="carousel-slide">
+                                        <img src="images/image_carousel/Image_5.png" alt="" id="lastClone">
+                                        <img src="images/image_carousel/Image_1.png" alt="">
+                                        <img src="images/image_carousel/Image_2.png" alt="">
+                                        <img src="images/image_carousel/Image_3.png" alt="">
+                                        <img src="images/image_carousel/Image_4.png" alt="">
+                                        <img src="images/image_carousel/Image_5.png" alt="">
+                                        <img src="images/image_carousel/Image_1.png" alt="" id="firstClone">
+                                </div>
+
                 </div>
             </div>
         
@@ -192,7 +206,6 @@
             </ul>            
             
     </footer>
-    <script src="./vendors/js/jquery.waypoints.min.js"></script>
     <script src="./JS/javascript.js"></script> 
 </body>
 </html>
