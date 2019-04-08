@@ -1,3 +1,5 @@
+/*-------------------------------------------Image Carousel--------------------------------------------------*/
+
 const carouselSlide=document.querySelector('.carousel-slide'); 
 const carouselImages = document.querySelectorAll('.carousel-slide img'); 
 
@@ -82,3 +84,83 @@ document.onkeydown = function(event){
             break; 
     }
 }
+
+/*-------------------------------------------ikigai questions--------------------------------------------------*/
+const need=document.querySelector('#need'); 
+const good=document.querySelector('#good'); 
+const love=document.querySelector('#love'); 
+const paid=document.querySelector('#paid'); 
+
+love.addEventListener('click',() =>{
+    document.getElementById("love_active").style.display = "block";
+    document.getElementById("love_text").style.display = "block";
+
+    document.getElementById("need").style.display = "block";
+    document.getElementById("good").style.display = "block";
+    document.getElementById("paid").style.display = "block";
+
+    document.getElementById("paid_text").style.display = "none";
+    document.getElementById("need_text").style.display = "none";
+    document.getElementById("good_text").style.display = "none";
+
+    document.getElementById("love").style.display = "none";
+    document.getElementById("need_active").style.display = "none";
+    document.getElementById("paid_active").style.display = "none";
+    document.getElementById("good_active").style.display = "none"
+
+})
+
+good.addEventListener('click',() =>{
+    document.getElementById("good_active").style.display = "block";
+    document.getElementById("good_text").style.display = "block";
+
+    document.getElementById("need").style.display = "block";
+    document.getElementById("love").style.display = "block";
+    document.getElementById("paid").style.display = "block";
+
+    document.getElementById("paid_text").style.display = "none";
+    document.getElementById("need_text").style.display = "none";
+    document.getElementById("love_text").style.display = "none";
+
+    document.getElementById("good").style.display = "none";
+    document.getElementById("need_active").style.display = "none";
+    document.getElementById("love_active").style.display = "none";
+    document.getElementById("paid_active").style.display = "none";
+})
+
+paid.addEventListener('click',() =>{
+    document.getElementById("paid_active").style.display = "block";
+    document.getElementById("paid_text").style.display = "block";
+
+    document.getElementById("need").style.display = "block";
+    document.getElementById("love").style.display = "block";
+    document.getElementById("good").style.display = "block";
+
+    document.getElementById("good_text").style.display = "none";
+    document.getElementById("need_text").style.display = "none";
+    document.getElementById("love_text").style.display = "none";
+
+    document.getElementById("paid").style.display = "none";
+    document.getElementById("need_active").style.display = "none";
+    document.getElementById("love_active").style.display = "none";
+    document.getElementById("good_active").style.display = "none";
+})
+
+need.addEventListener('click',() =>{
+    document.getElementById("need_active").style.display = "block";
+    document.getElementById("need_text").style.display = "block";
+
+    document.getElementById("paid").style.display = "block";
+    document.getElementById("love").style.display = "block";
+    document.getElementById("good").style.display = "block";
+
+    document.getElementById("good_text").style.display = "none";
+    document.getElementById("paid_text").style.display = "none";
+    document.getElementById("love_text").style.display = "none";
+
+    document.getElementById("need").style.display = "none";
+    document.getElementById("paid_active").style.display = "none";
+    document.getElementById("love_active").style.display = "none";
+    document.getElementById("good_active").style.display = "none";
+})
+

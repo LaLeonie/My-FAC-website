@@ -314,7 +314,7 @@ header{
 }
 
 .btn{
-    display: block; 
+    width: 100%; 
     font-family: 'Raleway', Arial, sans-serif;
     font-size: 85%; 
     font-weight: 500; 
@@ -328,12 +328,39 @@ header{
     box-shadow: -1px 2px 4px #d1d4da; 
 }
 
+.btn:hover{
+    background-color: rgba(231,63,57,0.2); 
+    font-weight: 600; 
+}
 
-#cycle_text{
+.textbox{
+    height: 80vh; 
+}
+
+#need{
+    display: none; 
+}
+
+#need_active{
+    display: block; 
+    background-color: #FF634A; 
+    font-weight: 600; 
+    color: #FAFCFC;
+}
+
+#love_active, #good_active, #paid_active{
+    display: none; 
+    background-color: #FF634A; 
+    font-weight: 600; 
+    color: #FAFCFC;
+}
+
+
+.cycle_text{
     padding: 0 0 0 5%;
 }
 
-#cycle_text:before{
+.cycle_text:before{
     display: block; 
     height: 3px; 
     background-color: #FF634A; 
@@ -342,7 +369,7 @@ header{
     margin: 0 15% 3% 15%; 
 }
 
-#cycle_text:after{
+.cycle_text:after{
     display: block; 
     height: 3px; 
     background-color: #FF634A; 
