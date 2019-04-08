@@ -1,0 +1,279 @@
+/*Big tablet to 1400px*/
+@media only screen and (max-width:1450px) {
+    .row {padding: 0 2%;}
+    .hero-text-box{
+        width: 70%; 
+        padding: 0 2%; 
+        left: 4%; 
+    }
+
+    #welcome{ 
+        font-size: 380%;
+        text-align: left; 
+    }
+    
+    #welcome_text{
+        font-size: 130%;
+        text-align: left; 
+    }
+
+}
+
+/*small tablet to big tablet: from 768px to 1023px*/
+@media only screen and (max-width:1023px){
+    
+    section {padding: 40px 0;}
+    body { font-size: 1.2em;}
+    .hero-text-box{
+        width: 80%; 
+        padding: 0 2%; 
+        left: 4%; 
+    }
+
+    #welcome{ font-size: 350%;}
+    
+    #welcome_text{
+        font-size: 130%;
+    }
+
+    .find_out{
+        text-align: right; 
+        padding: 0 6%;
+        font-size: 150%; 
+    }
+
+    #ikigai_diagram{
+        width: 50%; 
+        margin: 0 25%; 
+    }
+}
+
+
+
+/*small phones to small tablest: from 481 to 767px*/
+@media only screen and (max-width:767px){
+    * {
+        
+    }
+    body { font-size: 1em;}
+    section {padding: 30px 0;}
+    .row, .hero-text-box {
+        padding: 0 2%;
+    }
+    .col {width: 100%;}
+
+    .main-nav li{
+        display: inline-block; 
+        margin-left: 4px; 
+        text-decoration: none; 
+        padding-bottom: 8px; 
+    }
+
+    header{
+        background-image: url(img/Hero_placeholder.png); 
+        height: 100vh; 
+        background-size: cover; 
+        background-position: center;
+        background-attachment: fixed; 
+    }
+
+    #welcome{
+        align: right; 
+        font-size: 290%; 
+        padding-bottom: 4%; 
+    }
+
+    #welcome_text{
+        padding-right: 10%; 
+        font-size: 140%; 
+    }
+
+    .find_out{
+        text-align: center; 
+        padding: 0 6%;
+        font-size: 150%; 
+    }
+
+    #carousel{
+        width: 98%; 
+        padding: 0 auto;
+        border: 3px solid red;
+    }
+
+    .heading{
+        padding: 0 5%; 
+    }
+    #whycoding_text{
+        padding: 1% 5% 1% 4%; 
+    }
+    #quote{ display: none;}
+    #ikigai_diagram{
+        width: 80%; 
+        margin: 0 10%; 
+    }
+
+    #questions{
+        padding: 0 3%; 
+    }
+
+    .buttons{
+        display: flex; 
+        flex-wrap: wrap; 
+        justify-content: space-evenly; 
+    }
+
+    .btn{
+        font-size: 100%; 
+        width: 45%; 
+        display: inline-block; 
+    }
+
+    #cycle_text{
+        padding: 0 5%;
+    }
+
+    #coding_statement{
+        padding: 0% 0%; 
+    }
+
+    .reasons_left{
+        display: none; 
+        text-align: left;  
+        margin: 7% 0 0 0; 
+    }
+    
+    .reasons_right{
+        display: none; 
+        text-align: left;
+        margin: 7% 0 0 0;   
+    }
+    
+    .reasons_text_left{ 
+        text-align: left; 
+        margin: 2% 0 0 0;
+        padding: 0 5%;  
+    }
+    
+    .reasons_text_right{
+        text-align: left; 
+        margin: 2% 0 0 0; 
+        padding: 0 5%;  
+    }
+    
+    .distance{
+        margin-top: 0%; 
+    }
+
+    .header_duplicate{
+        margin: 3% 8% 0 3%; 
+        display: block; 
+        font-family: 'Playfair Display', serif;
+        color: #4B5161;
+        font-size: 130%; 
+        font-weight: 700; 
+        line-height: 120%; 
+    }
+
+    #coding_statement{
+        padding: 5% 5%; 
+        text-align: center;  
+    }
+
+    #contact{
+        padding: 4% 5% 7% 5%; 
+    }
+
+    .subheading{
+        text-align: right; 
+        padding: 0 10%; 
+    }
+    
+    #thanks{
+        font-size: 600%; 
+        line-height: 1em; 
+        padding-right: 20%; 
+    }
+    
+}
+
+/*small phones: from 0 to 480px*/
+@media only screen and (max-width:480px){
+    /* *{
+        border: 1px solid red; 
+    } */
+
+    section {padding: 20px 0;}
+    body { font-size: 1em;}
+
+    .long{
+        display: none; 
+    }
+
+    .short{
+        display: block; 
+    }
+    #welcome{
+        margin: 0 auto; 
+        font-size: 230%; 
+    }
+    
+    #welcome_text{
+        padding: 0 8% 0 0; 
+        font-size: 120%; 
+    }
+
+    h1{
+        font-size: 180%; 
+    }
+
+    h2{
+        font-size: 120%; 
+    }
+
+    #ikigai_diagram{
+        width: 90%; 
+        margin: 0 5%; 
+    }
+
+    .buttons{
+        display: block;  
+    }
+
+    .btn{
+        font-size: 110%; 
+        width: 100%; 
+        display: block; 
+        padding: 1em 1em; 
+        margin: 0 0 2% 0;  
+    }
+
+    #questions{
+        padding: 0 4% 0 3%; 
+    }
+
+    #cycle_text{
+        padding: 0 2%;
+    }
+
+    #contact{
+        padding: 4% 5% 7% 5%; 
+    }
+    
+    #thanks{
+        font-family: 'Playfair Display', serif;
+        color: #FF634A; 
+        font-weight: 700; 
+        font-size: 400%; 
+        line-height: 1em; 
+        padding-right: 40%; 
+    }
+    .statement p{
+        font-family: 'Raleway', Arial, sans-serif;
+        font-size: 110%; 
+        font-weight: 600; 
+        display: inline-block; 
+        text-align: center; 
+        line-height: 1.4em;
+    }
+    
+}

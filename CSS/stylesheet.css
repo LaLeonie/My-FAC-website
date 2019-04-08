@@ -3,14 +3,17 @@
 text grey:  #4B5161; 
 orange: #FF634A; 
 quote grey: #778299; 
+light grey: #E8ECF0; 
+Text white: #F4F8F9; 
+off-white: #FAFCFC; 
 
 */
 /*-------------------------------------------layout--------------------------------------------------*/
-.row{
-    max-width: 2140px; 
+.row {
+    max-width: 1366px; 
     margin: 0 auto;
-    padding: 0 2%;
-    border: 2px solid red;  
+    padding: 0 1%;
+    /* border: 2px solid red;   */
 }
 
 .viewport_80{
@@ -22,20 +25,31 @@ quote grey: #778299;
 }
 
 .whitespace{
-    margin: 10% 0 0 0; 
+    margin: 5% 0 0 0; 
+}
+
+section{
+    padding: 80px 0; 
+    /* border: 2px solid green;  */
 }
 /*-------------------------------------------basic setup--------------------------------------------------*/
 *{
     margin: 0; 
     padding: 0; 
     box-sizing: border-box; 
-    /* z */
+}
+html, body{
+    overflow-x: hidden; 
+    background-color: #FFF; 
+
+}
+body{
+    font-size: 1.4em; 
 }
 
 p {
     font-family: 'Raleway', Arial, sans-serif;
     color: #4B5161;
-    font-size: 1.4em; 
     text-rendering: optimizeLegibilty; 
     letter-spacing: 200%; 
     line-height: 1.5em; 
@@ -50,26 +64,36 @@ img{
 
 h1{
     font-family: 'Raleway', Arial, sans-serif;
-    font-size: 350%; 
+    font-size: 270%; 
     color: #4B5161; 
     font-weight: 700; 
     display: inline-block; 
-    padding: 4% 0 1% 0; 
-    line-height: 1.1em; 
-    margin: 8% 0 0 0;
-    border-bottom: 3px solid #FF634A;
+    
 }
 
 h2{
     font-family: 'Playfair Display', serif;
-    font-size: 250%; 
-    color: #4B5161; 
+    color: #4B5161;
+    font-size: 180%; 
     font-weight: 700; 
+    line-height: 120%; 
+}
+
+.heading:after{
+    display: block; 
+    height: 4px; 
+    background-color: #FF634A; 
+    content: " "; 
+    width: 100%; 
+    align: left; 
+    margin: 0 0 0 -45%; 
+}
+
+.stripe{
     display: inline-block; 
-    padding: 10% 0 5% 0; 
-    line-height: 1.1em; 
-    letter-spacing: 0.1em; 
-    text-transform: uppercase; 
+    background-color:rgba(237,241,244,0.98); 
+    color: #FF634A; 
+    border-radius: 2px; 
 }
 
 .highlight{
@@ -78,13 +102,22 @@ h2{
 
 .statement{
     font-family: 'Raleway', Arial, sans-serif;
-    font-size: 250%; 
     color: #4B5161; 
-    font-weight: 400; 
+    font-weight: 700; 
     display: inline-block; 
-    padding: 0 0 1% 0; 
-    text-align: right; 
-    line-height: 1.4em; 
+    text-align: center; 
+    line-height: 1.4em;
+    background-color: #E8ECF0; 
+    margin: 0 5%;  
+}
+
+.statement p{
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 140%; 
+    font-weight: 450; 
+    display: inline-block; 
+    text-align: center; 
+    line-height: 1.4em;
 }
 
 .subheading{
@@ -93,44 +126,31 @@ h2{
 
 /*-------------------------------------------quotes--------------------------------------------------*/
 .quote_mark{
-    font-size: 1500%; 
-    font-family: 'Playfair Display', serif;
     line-height: 0.1em; 
 
 }
 .quote{
     font-family: 'Playfair Display', serif;
     font-weight: 700; 
-    font-size: 150%; 
+    font-size: 110%; 
     color: #778299; 
 }
 
-.author{
-    text-align: right; 
-    font-family: 'Raleway', Arial, sans-serif;
-    font-size: 100%; 
-    color: #FF634A; 
-    display: inline-block; 
-
-}
-
-/*-------------------------------------------buttons--------------------------------------------------*/
-.btn{
-    display: block; 
-    background: yellow; 
-    color: black; 
-    text-decoration: none; 
-    padding: 1em 1.5em; 
-    border: 1px solid #666; 
-    margin: .5em 0; 
-}
-
 /*-------------------------------------------HEADER--------------------------------------------------*/
-/*-------------------------------------------navigation--------------------------------------------------*/
+/*-------------------------------------------main navigation--------------------------------------------------*/
+.sticky{
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    background-color: rgba(237,241,244,0.98); 
+    box-shadow: 0 2px 2px rgb(238, 238, 238); 
+}
+
 .main-nav{
     float: right; 
     list-style: none;
-    margin-top: 20px; 
+    margin-top: 10px; 
     font-family: 'Raleway', Arial, sans-serif;
 }
 
@@ -138,59 +158,66 @@ h2{
     display: inline-block; 
     margin-left: 40px; 
     text-decoration: none; 
+    padding-bottom: 8px; 
 }
 
-#home {
+.return_home {
     float: left; 
     display: inline-block;
-    margin-top: 20px; 
+    margin-top: 12px; 
 }
 
-#home a{
+.return_home a{
+    font-weight: 600; 
     color: #4B5161; 
     text-decoration: none; 
     text-transform: uppercase; 
     font-size: 90%; 
     font-family: 'Raleway', Arial, sans-serif;
+    padding-bottom: 8px; 
 }
 
 .main-nav li a:link, 
 .main-nav li a:visited{
+    font-weight: 600; 
     color: #4B5161; 
     text-decoration: none; 
     text-transform: uppercase; 
-    font-size: 90%; 
+    font-size: 70%; 
     border-bottom: 2px solid transparent; 
-    transition: border-bottom 0.25s;
-    padding: 6px 0;  
+    -webkit-transition: border-bottom 0.25s; 
+    padding: 9px 0;  
 }
-
+.return_home a:hover,
 .main-nav li a:hover, 
 .main-nav li a:active{
     border-bottom: 3px solid #FF634A; 
 }
 
-
+.short{
+    display: none; 
+}
 
 /*-------------------------------------------hero--------------------------------------------------*/
 header{
     background-image: url(img/Hero_placeholder.png); 
     height: 100vh; 
     background-size: cover; 
-    background-position: bottom;
+    background-position: center;
+    background-attachment: fixed; 
 }
 
 .hero-text-box{
     position: absolute; 
-    width: 1140px; 
-    top: 50%; 
+    width: 1100px; 
+    bottom: 10%; 
     left: 8%; 
+    text-align: left;
 }
 
 #welcome{
     font-family: 'Playfair Display', serif;
-    margin: 0 0 0.2em 20%; 
-    font-size: 500%; 
+    font-size: 400%; 
     font-weight: 600; 
     letter-spacing: 130%; 
     word-spacing: 3px; 
@@ -198,8 +225,9 @@ header{
 }
 
 #welcome_text{
+    align: left; 
     font-weight: 100; 
-    font-size: 200%; 
+    font-size: 150%; 
     color: #F4F8F9; 
 }
 /*-------------------------------------------MAIN--------------------------------------------------*/
@@ -207,14 +235,11 @@ header{
 #carousel{
     width: 100%; 
     padding: 0 auto;
-
 }
 
 .find_out{
-    font-size: 200%; 
     text-align: right; 
-    font-family: 'Raleway', Arial, sans-serif;
-    font-weight: 400; 
+    padding: 0 0 0 20%;
 }
 
 .about{
@@ -222,79 +247,143 @@ header{
 }
 
 /*-------------------------------------------why coding--------------------------------------------------*/
+#whycoding_text{
+    padding: 3% 0 0 0; 
+}
+
+
 #ikigai_diagram{
-    padding: 15% 0 0 0; 
+    width: 50%; 
+    margin-left: 40%; 
 }
 
 #ikigai_quote{
-    padding: 0 20% 0 0; 
+    padding: 0 10% 0 10%; 
     text-align: left; 
 }
 
 #ikigai_mark{
-    margin: 80% 0 0 0; 
+    margin: 60% 0 0 0; 
+    font-size: 400%; 
 }
 
-#cycle{
-    padding-top: 30%; 
+/*-------------------------------------------ikigai questions--------------------------------------------------*/
+#questions{
+    margin-top: 5%; 
 }
 
-#cycle_quote{
-    padding: 0 20% 0 0; 
-    text-align: left; 
+.btn{
+    display: block; 
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 85%; 
+    font-weight: 500; 
+    text-rendering: optimizeLegibilty; 
+    color:#4B5161;
+    text-decoration: none; 
+    padding: 1em 1.5em; 
+    margin: 0 0 1.1em 0; 
+    border: 1.5px solid #FF634A; 
+    border-radius: 10px; 
+    box-shadow: -1px 2px 4px #d1d4da; 
 }
+
 
 #cycle_text{
-    padding: 0 0 5% 0; 
+    padding: 0 0 0 5%;
+}
+
+#cycle_text:before{
+    display: block; 
+    height: 3px; 
+    background-color: #FF634A; 
+    content: " "; 
+    width: 70%; 
+    margin: 0 15% 3% 15%; 
+}
+
+#cycle_text:after{
+    display: block; 
+    height: 3px; 
+    background-color: #FF634A; 
+    content: " "; 
+    width: 70%; 
+    margin: 3% 15% 0 15%; 
 }
 
 #coding_statement{
-    padding: 30% 0 0 0; 
+    padding: 10% 10%; 
+    text-align: center;  
 }
+
 
 /*-------------------------------------------why FAC--------------------------------------------------*/
 .reasons_left{
-    font-family: 'Playfair Display', serif;
-    text-align: left; 
-    font-size: 280%; 
-    font-weight: 700; 
-    line-height: 0.95em; 
+    text-align: left;  
+    padding: 0 20% 0 0; 
 }
 
 .reasons_right{
-    font-family: 'Playfair Display', serif;
-    text-align: right; 
-    font-size: 280%; 
-    font-weight: 700; 
-    line-height: 0.95em; 
-    padding: 0 6% 0 0; 
+    text-align: right;  
+    padding: 0 0 0 20%; 
 }
 
 .reasons_text_left{
-    margin: 6% 0 0 0; 
+    margin: 7% 0 0 0; 
     text-align: left; 
+    padding: 0 20% 0 0; 
 }
 
 .reasons_text_right{
-    margin: 6% 0 0 0; 
+    margin: 7% 0 0 0; 
     text-align: right; 
+    padding: 0 0 0 20%; 
 }
 
 .distance{
-    margin: 4% 0 0 0; 
+    margin-top: 4%; 
+}
+
+.header_duplicate{
+    display: none; 
 }
 /*-------------------------------------------Contact--------------------------------------------------*/
+
+#contact{
+    padding: 4% 10% 7% 10%; 
+}
 
 #thanks{
     font-family: 'Playfair Display', serif;
     color: #FF634A; 
     font-weight: 700; 
-    font-size: 800%; 
-    padding: 20% 0 0 0; 
+    font-size: 700%; 
+    line-height: 1em; 
+    padding-right: 40%; 
 }
 
 /*-------------------------------------------Footer--------------------------------------------------*/
 
-#main-footer{
+.main-footer{
+    font-size: 400%;
+    list-style: none; 
+    width: 60%;  
+    display: flex; 
+    justify-content: space-evenly; 
+    margin: 5% 0 1% 20%; 
+}
+
+.main-footer li a{
+    display: inline-block; 
+    justify-content: space-evenly; 
+}
+
+.fab{
+    color: #4B5161; 
     float: center; 
+}
+
+#codewars{
+    width: 0.9em; 
+    fill:  #4B5161;  
+    display: inline-block; 
 }
