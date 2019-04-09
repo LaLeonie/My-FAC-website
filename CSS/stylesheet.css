@@ -33,6 +33,7 @@ section{
     padding: 80px 0; 
     /* border: 2px solid green;  */
 }
+
 /*-------------------------------------------basic setup--------------------------------------------------*/
 *{
     margin: 0; 
@@ -304,8 +305,9 @@ header{
 
 
 #ikigai_diagram{
-    width: 50%; 
-    margin-left: 40%; 
+    width: 70%; 
+    margin: 0 15%; 
+    padding-top: 5%; 
 }
 
 #ikigai_quote{
