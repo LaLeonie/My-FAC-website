@@ -6,6 +6,7 @@ quote grey: #778299;
 light grey: #E8ECF0; 
 Text white: #F4F8F9; 
 off-white: #FAFCFC; 
+link color: #009f4e; 
 
 */
 /*-------------------------------------------layout--------------------------------------------------*/
@@ -79,6 +80,10 @@ h2{
     line-height: 120%; 
 }
 
+a[href*="//"]{
+    color: #009f4e; 
+}
+
 .heading:after{
     display: block; 
     height: 4px; 
@@ -98,6 +103,10 @@ h2{
 
 .highlight{
     color: #FF634A; 
+}
+
+.new_paragraph{
+    padding-top: 3%; 
 }
 
 .statement{
