@@ -7,9 +7,9 @@ const carouselImages = document.querySelectorAll('.carousel-slide img');
 //Buttons
 const prevBtn = document.querySelector('#prevBtn'); 
 const nextBtn = document.querySelector('#nextBtn'); 
-const toggle = document.querySelector('#toggle'); 
 const pause = document.querySelector('#pause'); 
 const play = document.querySelector('#play')
+
 //Counter 
 let counter = 1; 
 const size = carouselImages[0].clientWidth; 

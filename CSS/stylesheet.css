@@ -145,6 +145,7 @@ h2{
     width: 100%; 
     background-color: rgba(237,241,244,0.98); 
     box-shadow: 0 2px 2px rgb(238, 238, 238); 
+    z-index: 12;  
 }
 
 .main-nav{
