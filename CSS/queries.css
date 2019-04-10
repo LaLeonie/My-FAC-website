@@ -8,7 +8,7 @@
     }
 
     #welcome{ 
-        font-size: 380%;
+        font-size: 370%;
         text-align: left; 
     }
     
@@ -21,12 +21,24 @@
 
 /*small tablet to big tablet: from 768px to 1023px*/
 @media only screen and (max-width:1023px){
+    /* *{
+        border: 2px solid blue; 
+    } */
+
+    header{
+        background-image: url(img/Hero_Medium.png); 
+        height: 100vh; 
+        background-size: cover; 
+        background-position: center;
+        background-attachment: fixed; 
+    }
     
     section {padding: 40px 0;}
     body { font-size: 1.2em;}
     .hero-text-box{
         width: 80%; 
         padding: 0 2%; 
+        bottom: 5%; 
         left: 4%; 
     }
 
@@ -56,14 +68,20 @@
 
 /*small phones to small tablest: from 481 to 767px*/
 @media only screen and (max-width:767px){
-    * {
-        
+    /* *{
+        border: 2px solid red; 
+    } */
+
+    header{
+        background-image: url(img/Hero_Tablet.png); 
+        height: 100vh; 
+        background-size: cover; 
+        background-position: center;
+        background-attachment: fixed; 
     }
     body { font-size: 1em;}
     section {padding: 30px 0;}
-    .row, .hero-text-box {
-        padding: 0 2%;
-    }
+    .row { padding: 0 2%;}
     .col {width: 100%;}
 
     .main-nav li{
@@ -73,23 +91,22 @@
         padding-bottom: 8px; 
     }
 
-    header{
-        background-image: url(img/Hero_placeholder.png); 
-        height: 100vh; 
-        background-size: cover; 
-        background-position: center;
-        background-attachment: fixed; 
+    .hero-text-box{
+        width: 95%; 
+        padding: 0 0%; 
+        bottom: 60%; 
+        left: 4%; 
     }
 
     #welcome{
         align: right; 
-        font-size: 290%; 
-        padding-bottom: 4%; 
+        font-size: 340%; 
+ 
     }
 
     #welcome_text{
         padding-right: 10%; 
-        font-size: 140%; 
+        font-size: 120%; 
     }
 
     .find_out{
@@ -112,8 +129,8 @@
     }
     #quote{ display: none;}
     #ikigai_diagram{
-        width: 80%; 
-        margin: 0 10%; 
+        width: 96%; 
+        margin: 6% 2%; 
     }
 
     #questions{
@@ -203,8 +220,9 @@
 /*small phones: from 0 to 480px*/
 @media only screen and (max-width:480px){
     /* *{
-        border: 1px solid red; 
-    } */
+        border: 2px solid blue; 
+    }
+ */
 
     section {padding: 20px 0;}
     body { font-size: 1em;}
@@ -218,7 +236,7 @@
     }
     #welcome{
         margin: 0 auto; 
-        font-size: 230%; 
+        font-size: 270%; 
     }
     
     #welcome_text{
@@ -260,7 +278,7 @@
     }
 
     #contact{
-        padding: 4% 5% 7% 5%; 
+        padding: 4% 2% 7% 2%; 
     }
     
     #thanks{
@@ -269,7 +287,7 @@
         font-weight: 700; 
         font-size: 400%; 
         line-height: 1em; 
-        padding-right: 40%; 
+        padding-right: 30%; 
     }
     .statement p{
         font-family: 'Raleway', Arial, sans-serif;

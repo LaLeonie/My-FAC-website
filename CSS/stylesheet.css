@@ -211,7 +211,7 @@ a[href*="//"]{
 
 /*-------------------------------------------hero--------------------------------------------------*/
 header{
-    background-image: url(img/Hero_placeholder.png); 
+    background-image: url(img/Hero_); 
     height: 100vh; 
     background-size: cover; 
     background-position: center;
@@ -253,6 +253,7 @@ header{
 }
 
 .carousel-container{
+    border: 2px solid red; 
     width: 100%; 
     margin: auto; 
     overflow: hidden; 
@@ -264,6 +265,7 @@ header{
     width: 100%; 
     height: 600px; 
 }
+
 
 #prevBtn{
     color: #FF634A;
