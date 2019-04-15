@@ -2,6 +2,13 @@
 
 const carouselSlide=document.querySelector('.carousel-slide'); 
 const carouselImages = document.querySelectorAll('.carousel-slide img'); 
+const container = document.querySelector('.carousel-container')
+
+//Media query variables; 
+const large = window.matchMedia("(max-width: 1450px)"); 
+const medium = window.matchMedia("(max-width: 1023px)"); 
+const small = window.matchMedia("(max-width: 767px)"); 
+const tiny = window.matchMedia("(max-width: 480px)"); 
 
 
 //Buttons
@@ -10,11 +17,13 @@ const nextBtn = document.querySelector('#nextBtn');
 const pause = document.querySelector('#pause'); 
 const play = document.querySelector('#play')
 
+
 //Counter 
 let counter = 1; 
-const size = carouselImages[0].clientWidth; 
 
+var size = carouselImages[0].clientWidth; 
 carouselSlide.style.transform = 'translateX('+ (-size*counter)+'px)'; 
+
 
 
 //slide right function
@@ -40,6 +49,21 @@ prevBtn.addEventListener('click',()=>{
     if (counter <= 0) return; 
     slideLeft(); 
 }); 
+
+//Reset image slide when browser window size is changed 
+function getTranslateX() {
+    var style = window.getComputedStyle(carouselSlide);
+    var matrix = new WebKitCSSMatrix(style.webkitTransform);
+    console.log(matrix.m41)
+  }
+
+  function resetImages(){
+
+  }
+
+  //Media query change 
+//   window.addEventListener('resize', location.reload()); 
+
 
 
 //loop through images
