@@ -219,18 +219,22 @@ header{
 }
 
 .hero-text-box{
-    position: absolute; 
-    width: 1100px; 
-    bottom: 10%; 
+    position: absolute;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;  
+    width: 80%; 
+    bottom: 10%;  
     left: 8%; 
     text-align: left;
+    
 }
 
 #welcome{
     font-family: 'Playfair Display', serif;
     font-size: 400%; 
     font-weight: 600; 
-    letter-spacing: 130%; 
+    letter-spacing: 140%; 
     word-spacing: 3px; 
     color: #F4F8F9; 
 }
@@ -240,6 +244,18 @@ header{
     font-weight: 100; 
     font-size: 150%; 
     color: #F4F8F9; 
+}
+
+.text-type{
+    display: inline-block; 
+    /* background-color:rgba(237,241,244,0.98);  */
+    color: #FF634A; 
+    border-radius: 2px; 
+    font-weight: bold; 
+}
+
+.text-type > .txt{
+    border-right: 0.2rem solid #F4F8F9;
 }
 /*-------------------------------------------MAIN--------------------------------------------------*/
 /*-------------------------------------------carousel--------------------------------------------------*/
