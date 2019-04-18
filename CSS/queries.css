@@ -64,7 +64,7 @@
         height: 374px; 
         margin: auto;  
         overflow: hidden; 
-        position: relative; 
+        /* position: relative;  */
     }
 
     #ikigai_diagram{

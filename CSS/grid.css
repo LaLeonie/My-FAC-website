@@ -1,53 +1,78 @@
 .section {
-	clear: both;
-	padding: 0px;
-	margin: 0px;
+  clear: both;
+  padding: 0px;
+  margin: 0px;
 }
 /*grouping elements in one line*/
 .row {
-    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+  zoom: 1; /* For IE 6/7 (trigger hasLayout) */
 }
 
 .row:before,
 .row:after {
-    content:"";
-    display:table;
+  content: "";
+  display: table;
 }
 .row:after {
-    clear:both;
+  clear: both;
 }
 
 /*column setup*/
 .col {
-	display: block;
-	float:left;
-	margin: 1% 0 1% 1.6%;
+  display: block;
+  float: left;
+  margin: 1% 0 1% 1.6%;
 }
 
-.col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
-
+.col:first-child {
+  margin-left: 0;
+} /* all browsers except IE6 and lower */
 
 /*Grid of 12*/
-.span_12{ width: 100%;}
+.span_12 {
+  width: 100%;
+}
 
-.span_11{width: 91.53%;}
+.span_11 {
+  width: 91.53%;
+}
 
-.span_10{width: 83.06%;}
+.span_10 {
+  width: 83.06%;
+}
 
-.span_9 {width: 74.6%;}
+.span_9 {
+  width: 74.6%;
+}
 
-.span_8 {width: 66.13%;}
+.span_8 {
+  width: 66.13%;
+}
 
-.span_7 {width: 57.66%; }
+.span_7 {
+  width: 57.66%;
+}
 
-.span_6 {width: 49.2%;}
+.span_6 {
+  width: 49.2%;
+}
 
-.span_5 {width: 40.73%;}
+.span_5 {
+  width: 40.73%;
+}
 
-.span_4 {width: 32.26%;}
+.span_4 {
+  width: 32.26%;
+}
 
-.span_3 {width: 23.8%;}
+.span_3 {
+  width: 23.8%;
+}
 
-.span_2 {width: 15.33%;}
+.span_2 {
+  width: 15.33%;
+}
 
-.span_1 {width: 6.86%;}
+.span_1 {
+  width: 6.86%;
+}

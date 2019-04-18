@@ -14,17 +14,17 @@
 
 </head>
 <body>
-    <header>
+    <header  id="home">
             <!-- NAVIGATION-->
             <nav class="sticky">
                 <div class="row">
-                    <div class="return_home long" id="home"><a href="#home" >Leonie Zorzi</a></div>
-                    <div class="return_home short" id="home"><a href="#home" >LZ</a></div>
-                    <ul class="main-nav">
-                        <li><a href="#aboutMe" >About me</a></li>
-                        <li><a href="#whyCoding" >Why Coding? </a></li>
-                        <li><a href="#whyFAC" >Why FAC?</a></li>
-                        <li><a href="#contact" >Contact me</a></li>
+                    <div class="return_home long" onclick='homeClick(this.id)'><a href="#home">Leonie Zorzi</a></div>
+                    <div class="return_home short"onclick='homeClick(this.id)'><a href="#home" >LZ</a></div>
+                    <ul id="main-nav">
+                        <li><a class="nav-elem" href="#aboutMe" id="link1" onclick='handleLinkClick(this.id)'>About me</a></li>
+                        <li><a class="nav-elem" href="#whyCoding" id="link2"  onclick='handleLinkClick(this.id)'>Why Coding? </a></li>
+                        <li><a class="nav-elem" href="#whyFAC" id="link3" onclick='handleLinkClick(this.id)'>Why FAC?</a></li>
+                        <li><a class="nav-elem" href="#contact" id="link4" onclick='handleLinkClick(this.id)'>Contact</a></li>
                     </ul>
                 </div>
             </nav>
@@ -77,9 +77,9 @@
                             <p class="quote" id="ikigai_quote">ikigai is the reason why you get up in the morning. It's about feeling your work makes a difference in people's lives.</p>
                         </div>
                         <div class="col span_7">
-                                <p>After college, I was drawn to a career in media production as it seemed to provide a perfect blend of creativity, versatility and entrepreneurship. Ten years, two media-related degrees and three international moves later, I'm now working as freelance producer and motion designer in the advertising industry. Throughout the past years, I had the opportunity to work on films, TV productions and online content - projects that 19-year old me would have been super excited about. But instead of excitement, I started feeling increasingly frustrated in my job and with my career choices. As I was grappling with what felt like a <a href="https://en.wikipedia.org/wiki/Quarter-life_crisis" alt="Wikipedia article on Quarter-life crisis" target="_blank">quarter-life crisis</a>, I learned about <a href="https://en.wikipedia.org/wiki/Ikigai" alt="Wikipedia article on ikigai" target="_blank">ikigai</a>, a Japanese concept meaning  "a reason for being" which can serve as some sort of compass to navigate both career and life decisions. </p>
+                                <p>After college, I was drawn to a career in media production as it seemed to provide a perfect blend of creativity, versatility and entrepreneurship. Ten years, two media-related degrees and three international moves later, I'm now working as a freelance producer and motion graphics designer in the advertising industry. Throughout the past years, I had the opportunity to work on films, TV productions and online content - projects that 19-year old me would have been super excited about. But instead of excitement, I started feeling increasingly frustrated in my job and with my career choices. As I was grappling with what felt like a <a href="https://en.wikipedia.org/wiki/Quarter-life_crisis" alt="Wikipedia article on Quarter-life crisis" target="_blank">quarter-life crisis</a>, I learned about <a href="https://en.wikipedia.org/wiki/Ikigai" alt="Wikipedia article on ikigai" target="_blank">ikigai</a>, a Japanese concept meaning  "a reason for being" which can serve as some sort of compass to navigate both career and life decisions. </p>
 
-                                <p class="new_paragraph">And that was when the penny dropped: Not only had I not found my ikigai yet, but I also realized that I most likely wouldn't find it in film and video production <i>(unless of course David Attenborough called asking me to produce the next Blue Planet).</i><br>
+                                <p class="new_paragraph">And there was <a href="https://en.wiktionary.org/wiki/des_Pudels_Kern" alt="Wikipedia article on the expression The poodle's core" target="_blank">'the poodle's core'</a>: Not only had I not found my ikigai yet, but I also realized that most likely,I wouldn't find it in film and video production <i>(unless maybe David Attenborough called asking me to produce the next Blue Planet).</i><br>
                                 From that point, I knew that I had to explore other career routes. So I started my quest for a new career <b class="highlight">by addressing ikigai's four defining questions</b>...</p> 
                         
                         </div>
@@ -110,16 +110,16 @@
                     </div>
                 </div>
 
-        </section>
-        <section class="statement">
+       
+        <div class="statement">
                 <div id="coding_statement">
-                                <p> The more I've learned about coding, the more I discovered that it ticks many of those ikigai 'checkboxes' for me. It felt like knocking out my quarter-life crisis in box fight. The anxiety and regrets I had in regards to career choices gradually turned into excitement and ambition. And when I learned about FAC, this excitement was turned up a few notches. 
+                                <p> The more I've learned about coding, the more I realized that it ticks many of those ikigai 'checkboxes' for me. This by itself felt like knocking out my quarter-life crisis in a box fight. The anxiety and regrets I had in regards to career choices gradually turned into excitement and ambition. And when I learned about FAC, this excitement was turned up a few notches. 
                                 </p>
                 </div>
                                 
         
-        </section>
-                
+        </div>
+        </section>        
         <!-- whyFAC section-->
         <section id="whyFAC">
             <div class="row heading">
@@ -160,7 +160,7 @@
                     </div>
                     <div class="col span_7">
                             <p class="header_duplicate">I enjoy <span class="highlight">pair programming </span>and believe in the value self-directed learning</p>
-                            <p class="reasons_text_left">Throughout the FAC's regular meetups and the part-time short course, I had a chance to practice pair programming on multiple occasions. This was an eye-opening experience for me, as I always presumed that coding was primarily a solitary exercise. With pair programming, I learned that coding can be very <span class="highlight">collaborative and challenging in two very different ways</span>:<br>1) finding solutions for coding challenges and <br>2) speaking in 'code' lingo to a fellow coder. <br>I believe that both challenges require different skill sets and are equally important. I thoroughly enjoy pair programming as I genuinely like working in teams and I found that it consolidated my own learning tremendously. Eventually, I hope to integrate this practice into my professional life. Hence, I was very excited when I learned that FAC students do pair programming most of the time - which provides plenty of time to hone both of those skill sets.</p>
+                            <p class="reasons_text_left">Throughout the FAC's regular meetups and the part-time short course, I had a chance to practice pair programming on multiple occasions. This was an eye-opening experience for me, as I always presumed that coding was primarily a solitary exercise. With pair programming, I learned that coding can be very <span class="highlight">collaborative and challenging in two very different ways</span>:<br>1) finding solutions for coding challenges and <br>2) sharing my thoughts in 'code lingo' with fellow coders. <br>I believe that both challenges require different skill sets and are equally important. I thoroughly enjoy pair programming as I genuinely like working in teams and I found that it consolidated my own learning tremendously. Eventually, I hope to integrate this practice into my professional life. Hence, I was very excited when I learned that FAC students do pair programming most of the time - which provides plenty of time to hone both of those skill sets.</p>
                             <p class="new_paragraph reasons_text_left">
                                 Another point that FAC students and alumni highlighted to me was that the course requires a fair amount of <span class="highlight">self-initiated learning</span>, i.e. instead of spoon feeding information, students are asked to research topics and solutions on their own. As a self-taught motion graphics designer, I am very familiar with this kind of learning. I know how often a solution is just one google search away and the only thing that keeps you from it is your own ability to formulate the right question. Therefore, I find that <span class="highlight">research skills are invaluable</span> and from my understanding, the FAC curriculum provides a perfect framework to hone those research skills. As I'm an experienced, persistent self-learner, I have no doubt that this teaching approach fits well with my own nature.
                             </p>
@@ -178,14 +178,15 @@
                             <h2 class="reasons_left">I believe in <span class="highlight">giving back</span> and in making education more accessible</h2>
                     </div>
             </div>
+        
         </section>
-
-        <section class="statement">
-                <div id="contact">
+        <section id="contact">
+                <div class="statement">
                                 <p id="thanks">Thanks</p>
                                 <p>...for taking the time to read through my website. I realize that it was quite a pile to read through. I hope it was enough to spark your interest in meeting me for a chat. If so, you can contact me at <b class="highlight">Leonie.Zorzi@hotmail.com</b> or <b class="highlight">07484&nbsp;143&nbsp;159</b>.<br> I hope to see you soon.
                 </div>
         </section>
+        
     </main>
     <footer>
             <ul class="main-footer">
@@ -202,5 +203,6 @@
             
     </footer>
     <script src="./JS/javascript.js"></script> 
+    <script src="./JS/codebar.js"></script> 
 </body>
 </html>

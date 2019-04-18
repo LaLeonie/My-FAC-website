@@ -4,12 +4,6 @@ const carouselSlide=document.querySelector('.carousel-slide');
 const carouselImages = document.querySelectorAll('.carousel-slide img'); 
 const container = document.querySelector('.carousel-container')
 
-//Media query variables; 
-const large = window.matchMedia("(max-width: 1450px)"); 
-const medium = window.matchMedia("(max-width: 1023px)"); 
-const small = window.matchMedia("(max-width: 767px)"); 
-const tiny = window.matchMedia("(max-width: 480px)"); 
-
 
 //Buttons
 const prevBtn = document.querySelector('#prevBtn'); 
@@ -60,11 +54,6 @@ function getTranslateX() {
   function resetImages(){
 
   }
-
-  //Media query change 
-//   window.addEventListener('resize', location.reload()); 
-
-
 
 //loop through images
 carouselSlide.addEventListener('transitionend', ()=>{
@@ -140,7 +129,7 @@ TypeWriter.prototype.type = function(){
     this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`; 
 
     //Initial Type Speed 
-    let typeSpeed = 300; 
+    let typeSpeed = 260; 
 
     if(this.isDeleting){
         typeSpeed /=2; 
@@ -253,4 +242,6 @@ need.addEventListener('click',() =>{
     document.getElementById("love_active").style.display = "none";
     document.getElementById("good_active").style.display = "none";
 })
+
+/*-------------------------------------------menu --------------------------------------------------*/
 
