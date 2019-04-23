@@ -71,7 +71,6 @@ function handleScroll() {
   // Get the current vertical position of the scroll bar
   var position = document.body.scrollTop;
   var elems = document.getElementsByClassName("nav-elem");
-  console.log(elems);
   for (let index = 0; index < elems.length; index++) {
     var anchorId = elems[index].getAttribute("href").substr(1);
     var target = document.getElementById(anchorId).offsetTop;
