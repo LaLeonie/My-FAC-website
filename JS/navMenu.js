@@ -130,3 +130,25 @@ function activeHeader() {
 }
 
 window.addEventListener("scroll", activeHeader);
+
+/*-------------------------------------------hidehomeButton--------------------------------------------------*/
+
+function buttonReveal() {
+  var largeButton = document.getElementById("homeLarge");
+  var smallButton = document.getElementById("homeSmall");
+  var welcome = document.getElementById("welcome");
+  var welcomeBottom = welcome.getBoundingClientRect().bottom;
+  var pageYOffset = window.pageYOffset;
+  var viewportHeight = window.innerHeight;
+  var distance = 0.3 * viewportHeight;
+
+  if (welcomeBottom < 0) {
+    largeButton.classList.remove("hidden");
+    smallButton.classList.remove("hidden");
+  }
+  if (pageYOffset < distance) {
+    largeButton.classList.add("hidden");
+    smallButton.classList.add("hidden");
+  }
+}
+window.addEventListener("scroll", buttonReveal);
