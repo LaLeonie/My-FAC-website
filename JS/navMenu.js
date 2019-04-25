@@ -1,27 +1,6 @@
-//Remove active from all anchor and add it to the clicked anchor
-
-// window.onscroll = function() {
-//   handleScroll();
-// };
-
-// function handleScroll() {
-//   var all = document.getElementsByTagName("section");
-//   for (let index = 0; index < all.length; index++) {
-//     const element = all[index].offsetTop;
-//     var link = document.getElementById(`link${index + 1}`);
-//     var offsetHeight = all[index].offsetHeight;
-//     if (element < window.pageYOffset ) {
-//       link.classList.add("active-link");
-//       if (element + offsetHeight < window.pageYOffset) {
-//         link.classList.remove("active-link");
-//       }
-//     }
-//   }
-// }
+/*-------------------------------------------Highlight menu on click--------------------------------------------------*/
 var offset = 0;
 function handleLinkClick(linkID) {
-  // Prevent the link from updating the URL
-  event.preventDefault();
   //remove active from all anchor and add it to the clicked anchor
   var classes = document.getElementsByClassName("active-link");
   var element = document.getElementById(linkID);
@@ -32,20 +11,9 @@ function handleLinkClick(linkID) {
     }
   }
   element.classList.add("active-link");
-
-  // The id of the section we want to go to
-  var anchorId = element.getAttribute("href").substr(1);
-  //get the element
-  var target = document.getElementById(anchorId);
-  target.scrollIntoView({
-    behavior: "smooth",
-    block: "start"
-  });
 }
 
 function homeClick(linkID) {
-  // Prevent the link from updating the URL
-  event.preventDefault();
   //remove active from all anchor and add it to the clicked anchor
   var classes = document.getElementsByClassName("active-link");
   var element = document.getElementById(linkID);
@@ -55,93 +23,110 @@ function homeClick(linkID) {
       list.classList.remove("active-link");
     }
   }
-  //get the element
-  var target = document.getElementById("home");
-  target.scrollIntoView({
-    behavior: "smooth",
-    block: "start"
-  });
 }
 
-window.onscroll = function() {
-  handleScroll();
-};
+/*-------------------------------------------highlight menu on scroll--------------------------------------------------*/
 
-function handleScroll() {
-  // Get the current vertical position of the scroll bar
-  var position = document.body.scrollTop;
-  var elems = document.getElementsByClassName("nav-elem");
-  for (let index = 0; index < elems.length; index++) {
-    var anchorId = elems[index].getAttribute("href").substr(1);
-    var target = document.getElementById(anchorId).offsetTop;
-    console.log(position);
-    if (position >= target) {
-      for (let j = 1; j < 5; j++) {
-        var list = document.getElementById(`link${j}`);
-        if (classes) {
-          list.classList.remove("active-link");
-        }
+function activeHeader() {
+  //Get header elements
+  var welcome = document.getElementById("welcome");
+  var header1 = document.getElementById("find_out");
+  var header2 = document.getElementById("philosophie");
+  var header3 = document.getElementById("join_FAC");
+  var header4 = document.getElementById("thanks");
+
+  //get viewport coordinates
+  var pageYOffset = window.pageYOffset;
+  var viewportHeight = window.innerHeight;
+  var viewportBottom = pageYOffset + viewportHeight;
+
+  //Get element's relative position in document
+  var relativeBottom = function(elem) {
+    var distance = elem.getBoundingClientRect();
+    var pageYOffset = window.pageYOffset;
+    var relBot = pageYOffset + distance.bottom;
+    return relBot;
+  };
+
+  //Get element's relative top position in document
+  var positionTop = function(elem) {
+    var distance = elem.getBoundingClientRect();
+    return distance.top;
+  };
+
+  //Get links with active class
+  var classes = document.getElementsByClassName("active-link");
+
+  //Header is active if it's relative Bottom is above bottom of viewport && next header's relative Bottom is below bottom of viewport
+  //remove all highlights if top position of welcome text is larger than 0
+  if (positionTop(welcome) > 0) {
+    for (let index = 1; index < 5; index++) {
+      var list = document.getElementById(`link${index}`);
+      if (classes) {
+        list.classList.remove("active-link");
       }
-      elems[index].classList.add("active-link");
     }
+  }
+  //Condition for first header
+  if (
+    relativeBottom(header1) < viewportBottom &&
+    relativeBottom(header2) > viewportBottom
+  ) {
+    //remove active from all anchor and add it to the clicked anchor
+    var element1 = document.getElementById("link1");
+    for (let index = 1; index < 5; index++) {
+      var list = document.getElementById(`link${index}`);
+      if (classes) {
+        list.classList.remove("active-link");
+      }
+    }
+    element1.classList.add("active-link");
+  }
+  //Condition for second header
+  if (
+    relativeBottom(header2) < viewportBottom &&
+    relativeBottom(header3) > viewportBottom
+  ) {
+    //remove active from all anchor and add it to the clicked anchor
+    var element2 = document.getElementById("link2");
+    for (let index = 1; index < 5; index++) {
+      var list = document.getElementById(`link${index}`);
+      if (classes) {
+        list.classList.remove("active-link");
+      }
+    }
+    element2.classList.add("active-link");
+  }
+  //Condition for third header
+  if (
+    relativeBottom(header3) < viewportBottom &&
+    relativeBottom(header4) > viewportBottom
+  ) {
+    //remove active from all anchor and add it to the clicked anchor
+    var element3 = document.getElementById("link3");
+    for (let index = 1; index < 5; index++) {
+      var list = document.getElementById(`link${index}`);
+      if (classes) {
+        list.classList.remove("active-link");
+      }
+    }
+    element3.classList.add("active-link");
+  }
+  //Condition for fourth header
+  if (
+    relativeBottom(header4) < viewportBottom &&
+    relativeBottom(header3) < viewportBottom - viewportHeight
+  ) {
+    //remove active from all anchor and add it to the clicked anchor
+    var element4 = document.getElementById("link4");
+    for (let index = 1; index < 5; index++) {
+      var list = document.getElementById(`link${index}`);
+      if (classes) {
+        list.classList.remove("active-link");
+      }
+    }
+    element4.classList.add("active-link");
   }
 }
 
-//Get section elements
-var section1 = document.getElementById("aboutMe");
-var section2 = document.getElementById("whyCoding");
-var section3 = document.getElementById("whyFAC");
-var section4 = document.getElementById("contact");
-
-//Helper function to check if element is in viewpoert
-// const isInViewport = function(el) {
-//   const scroll = window.scrollY || window.pageYOffset;
-//   console.log(scroll);
-//   const boundsTop = el.getBoundingClientRect().top;
-
-//   const viewport = {
-//     top: scroll,
-//     bottom: scroll + window.innerHeight
-//   };
-
-//   const bounds = {
-//     top: boundsTop,
-//     bottom: boundsTop + el.clientHeight
-//   };
-//   if (bounds.top >= viewport.top && bounds.bottom >= viewport.top) return true;
-//   else return false;
-// };
-
-// //Run the function
-// window.addEventListener(
-//   "scroll",
-//   function(event) {
-//     if (isInViewport(section1)) {
-//       console.log("true");
-//     } else {
-//       console.log("false");
-//     }
-//   },
-//   false
-// );
-
-// // document.addEventListener("DOMContentLoaded", () => {
-// //   const tester = document.getElementById("aboutMe");
-
-// //   const handler = () =>
-// //     raf(() => {
-// //       if (gambitGalleryIsInView(tester)) console.log(true);
-// //       else console.log(false);
-// //     });
-
-// //   handler();
-// //   window.addEventListener("scroll", handler);
-// // });
-
-// // const raf =
-// //   window.requestAnimationFrame ||
-// //   window.webkitRequestAnimationFrame ||
-// //   window.mozRequestAnimationFrame ||
-// //   function(callback) {
-// //     window.setTimeout(callback, 1000 / 60);
-// //   };
+window.addEventListener("scroll", activeHeader);

@@ -379,24 +379,19 @@ header {
   height: 80vh;
 }
 
-#need {
+.activeButton,
+.activeButton:hover {
+  background-color: #ff634a;
+  font-weight: 600;
+  color: #fafcfc;
+}
+
+.hidden {
   display: none;
 }
 
-#need_active {
+.activeText {
   display: block;
-  background-color: #ff634a;
-  font-weight: 600;
-  color: #fafcfc;
-}
-
-#love_active,
-#good_active,
-#paid_active {
-  display: none;
-  background-color: #ff634a;
-  font-weight: 600;
-  color: #fafcfc;
 }
 
 .cycle_text {

@@ -165,76 +165,160 @@ const good = document.querySelector("#good");
 const love = document.querySelector("#love");
 const paid = document.querySelector("#paid");
 
+var loveActive = document.getElementById("love_active");
+var loveText = document.getElementById("love_text");
+
+var needActive = document.getElementById("need_active");
+var needText = document.getElementById("need_text");
+
+var goodActive = document.getElementById("good_active");
+var goodText = document.getElementById("good_text");
+
+var paidActive = document.getElementById("paid_active");
+var paidText = document.getElementById("paid_text");
+
+var buttons = document.querySelectorAll("btn");
+var buttonsActive = document.getElementsByClassName("activeButton");
+
 love.addEventListener("click", () => {
-  document.getElementById("love_active").style.display = "block";
-  document.getElementById("love_text").style.display = "block";
+  //buttons
+  //Remove activeButton class from all other buttons
+  var currentButton = document.querySelector(".activeButton");
+  currentButton.classList.remove("activeButton");
+  //Add activeButton to clicked item
+  love.classList.add("activeButton");
 
-  document.getElementById("need").style.display = "block";
-  document.getElementById("good").style.display = "block";
-  document.getElementById("paid").style.display = "block";
-
-  document.getElementById("paid_text").style.display = "none";
-  document.getElementById("need_text").style.display = "none";
-  document.getElementById("good_text").style.display = "none";
-
-  document.getElementById("love").style.display = "none";
-  document.getElementById("need_active").style.display = "none";
-  document.getElementById("paid_active").style.display = "none";
-  document.getElementById("good_active").style.display = "none";
+  //text
+  //remove activeText from current text and add hidden
+  var currentText = document.querySelector(".activeText");
+  currentText.classList.remove("activeText");
+  currentText.classList.add("hidden");
+  //remove hidden from active text and add activeText
+  var activeText = document.getElementById("love_text");
+  activeText.classList.remove("hidden");
+  activeText.classList.add("activeText");
 });
 
 good.addEventListener("click", () => {
-  document.getElementById("good_active").style.display = "block";
-  document.getElementById("good_text").style.display = "block";
+  //buttons
+  var currentButton = document.querySelector(".activeButton");
+  currentButton.classList.remove("activeButton");
+  good.classList.add("activeButton");
 
-  document.getElementById("need").style.display = "block";
-  document.getElementById("love").style.display = "block";
-  document.getElementById("paid").style.display = "block";
-
-  document.getElementById("paid_text").style.display = "none";
-  document.getElementById("need_text").style.display = "none";
-  document.getElementById("love_text").style.display = "none";
-
-  document.getElementById("good").style.display = "none";
-  document.getElementById("need_active").style.display = "none";
-  document.getElementById("love_active").style.display = "none";
-  document.getElementById("paid_active").style.display = "none";
+  //text
+  var currentText = document.querySelector(".activeText");
+  currentText.classList.remove("activeText");
+  currentText.classList.add("hidden");
+  var activeText = document.getElementById("good_text");
+  activeText.classList.remove("hidden");
+  activeText.classList.add("activeText");
 });
 
 paid.addEventListener("click", () => {
-  document.getElementById("paid_active").style.display = "block";
-  document.getElementById("paid_text").style.display = "block";
+  //buttons
+  var currentButton = document.querySelector(".activeButton");
+  currentButton.classList.remove("activeButton");
+  paid.classList.add("activeButton");
 
-  document.getElementById("need").style.display = "block";
-  document.getElementById("love").style.display = "block";
-  document.getElementById("good").style.display = "block";
-
-  document.getElementById("good_text").style.display = "none";
-  document.getElementById("need_text").style.display = "none";
-  document.getElementById("love_text").style.display = "none";
-
-  document.getElementById("paid").style.display = "none";
-  document.getElementById("need_active").style.display = "none";
-  document.getElementById("love_active").style.display = "none";
-  document.getElementById("good_active").style.display = "none";
+  //text
+  var currentText = document.querySelector(".activeText");
+  currentText.classList.remove("activeText");
+  currentText.classList.add("hidden");
+  var activeText = document.getElementById("paid_text");
+  activeText.classList.remove("hidden");
+  activeText.classList.add("activeText");
 });
 
 need.addEventListener("click", () => {
-  document.getElementById("need_active").style.display = "block";
-  document.getElementById("need_text").style.display = "block";
+  //buttons
+  var currentButton = document.querySelector(".activeButton");
+  currentButton.classList.remove("activeButton");
+  need.classList.add("activeButton");
 
-  document.getElementById("paid").style.display = "block";
-  document.getElementById("love").style.display = "block";
-  document.getElementById("good").style.display = "block";
-
-  document.getElementById("good_text").style.display = "none";
-  document.getElementById("paid_text").style.display = "none";
-  document.getElementById("love_text").style.display = "none";
-
-  document.getElementById("need").style.display = "none";
-  document.getElementById("paid_active").style.display = "none";
-  document.getElementById("love_active").style.display = "none";
-  document.getElementById("good_active").style.display = "none";
+  //text
+  var currentText = document.querySelector(".activeText");
+  currentText.classList.remove("activeText");
+  currentText.classList.add("hidden");
+  var activeText = document.getElementById("need_text");
+  activeText.classList.remove("hidden");
+  activeText.classList.add("activeText");
 });
+
+// love.addEventListener("click", () => {
+//   //Remove activeButton class from all other buttons
+//   buttonsActive.classList.remove("activeButton");
+//   //Add activeButton to clicked item
+//   love.classList.add("activeButton");
+
+//   loveActive.style.display = "block";
+//   loveText.style.display = "block";
+
+//   need.style.display = "block";
+//   good.style.display = "block";
+//   paid.style.display = "block";
+
+//   paidText.style.display = "none";
+//   needText.style.display = "none";
+//   goodText.style.display = "none";
+
+//   love.style.display = "none";
+//   needActive.style.display = "none";
+//   paidActive.style.display = "none";
+//   goodActive.style.display = "none";
+// });
+
+// good.addEventListener("click", () => {
+//   goodActive.style.display = "block";
+//   goodText.style.display = "block";
+
+//   need.style.display = "block";
+//   love.style.display = "block";
+//   paid.style.display = "block";
+
+//   paidText.style.display = "none";
+//   needText.style.display = "none";
+//   loveText.style.display = "none";
+
+//   good.style.display = "none";
+//   needActive.style.display = "none";
+//   loveActive.style.display = "none";
+//   paidActive.style.display = "none";
+// });
+
+// paid.addEventListener("click", () => {
+//   paidActive.style.display = "block";
+//   paidText.style.display = "block";
+
+//   need.style.display = "block";
+//   love.style.display = "block";
+//   good.style.display = "block";
+
+//   goodText.style.display = "none";
+//   needText.style.display = "none";
+//   loveText.style.display = "none";
+
+//   paid.style.display = "none";
+//   needActive.style.display = "none";
+//   loveActive.style.display = "none";
+//   goodActive.style.display = "none";
+// });
+
+// need.addEventListener("click", () => {
+//   needActive.style.display = "block";
+//   needText.style.display = "block";
+
+//   paid.style.display = "block";
+//   love.style.display = "block";
+//   good.style.display = "block";
+
+//   goodText.style.display = "none";
+//   paidText.style.display = "none";
+//   loveText.style.display = "none";
+
+//   need.style.display = "none";
+//   paidActive.style.display = "none";
+//   loveActive.style.display = "none";
+//   goodActive.style.display = "none";
+// });
 
 /*-------------------------------------------menu --------------------------------------------------*/
