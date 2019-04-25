@@ -159,10 +159,6 @@
     margin: 6% 2%;
   }
 
-  #questions {
-    padding: 0 3%;
-  }
-
   .buttons {
     display: flex;
     flex-wrap: wrap;
@@ -177,10 +173,6 @@
 
   .cycle_text {
     padding: 0 5%;
-  }
-
-  #coding_statement {
-    padding: 0% 0%;
   }
 
   .reasons_left {
@@ -308,6 +300,7 @@
 
   #questions {
     padding: 0 4% 0 3%;
+    margin-bottom: 5%;
   }
 
   .cycle_text {
@@ -329,7 +322,7 @@
   .statement p {
     font-family: "Raleway", Arial, sans-serif;
     font-size: 110%;
-    font-weight: 600;
+    font-weight: 800;
     display: inline-block;
     text-align: center;
     line-height: 1.4em;

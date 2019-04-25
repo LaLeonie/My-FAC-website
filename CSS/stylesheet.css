@@ -125,7 +125,7 @@ a[href*="//"] {
 .statement p {
   font-family: "Raleway", Arial, sans-serif;
   font-size: 140%;
-  font-weight: 450;
+  font-weight: 600;
   display: inline-block;
   text-align: center;
   line-height: 1.4em;
@@ -351,7 +351,7 @@ header {
 
 /*-------------------------------------------ikigai questions--------------------------------------------------*/
 #questions {
-  margin-top: 5%;
+  margin: 5% 0;
 }
 
 .btn {
