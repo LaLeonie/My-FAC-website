@@ -31,7 +31,7 @@ link color: #009f4e;
 
 section {
   padding: 80px 0;
-  /* border: 2px solid green;  */
+  /* border: 2px solid green; */
 }
 
 /*-------------------------------------------basic setup--------------------------------------------------*/
@@ -133,6 +133,7 @@ a[href*="//"] {
 
 .subheading {
   text-align: right;
+  padding-left: 30%;
 }
 
 /*-------------------------------------------quotes--------------------------------------------------*/
