@@ -25,6 +25,7 @@ function slideRight() {
   carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
 }
 
+//slide left function
 function slideLeft() {
   carouselSlide.style.transition = "transform 0.6s ease-in-out";
   counter--;
@@ -43,13 +44,13 @@ prevBtn.addEventListener("click", () => {
 });
 
 //Reset image slide when browser window size is changed
-function getTranslateX() {
-  var style = window.getComputedStyle(carouselSlide);
-  var matrix = new WebKitCSSMatrix(style.webkitTransform);
-  console.log(matrix.m41);
-}
+// function getTranslateX() {
+//   var style = window.getComputedStyle(carouselSlide);
+//   var matrix = new WebKitCSSMatrix(style.webkitTransform);
+//   console.log(matrix.m41);
+// }
 
-function resetImages() {}
+// function resetImages() {}
 
 //loop through images
 carouselSlide.addEventListener("transitionend", () => {
@@ -124,7 +125,7 @@ TypeWriter.prototype.type = function() {
   this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
 
   //Initial Type Speed
-  let typeSpeed = 260;
+  let typeSpeed = 200;
 
   if (this.isDeleting) {
     typeSpeed /= 2;
@@ -141,7 +142,7 @@ TypeWriter.prototype.type = function() {
     //Move to next word
     this.wordIndex++;
     //Pause before start typing
-    typeSpeed = 500;
+    typeSpeed = 200;
   }
 
   setTimeout(() => this.type(), typeSpeed);
