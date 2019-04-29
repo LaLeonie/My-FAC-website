@@ -377,6 +377,10 @@ header {
   font-weight: 600;
 }
 
+.btn:focus {
+  outline: 0;
+}
+
 .textbox {
   height: 80vh;
 }
